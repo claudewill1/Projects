@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventManager.Models
+namespace Summitworks_EventManager.Models
 {
     public enum Category
     {

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
-namespace EventManager.Models
+namespace Summitworks_EventManager.Models
 {
     public class Event
     {
@@ -22,7 +21,7 @@ namespace EventManager.Models
         [Required]
         [MaxLength(50)]
         public string AddressLine1 { get; set; }
-        [Required]
+        
         [MaxLength(50)]
         public string AddressLine2 { get; set; }
         [Required]
@@ -33,7 +32,8 @@ namespace EventManager.Models
         public string State { get; set; }
         [Required]
         public int ZipCode { get; set; }
-
+        [MaxLength(60)]
+        public string EventDescription { get; set; }
         [Required]
         public DateTime EventDateTime { get; set; }
         [Required]
