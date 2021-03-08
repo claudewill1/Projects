@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Summitworks_EventManager.Models
 {
-    public class SqlEventSchedule
+    public class SqlEventSchedule : IEventSchedule
     {
         private readonly AppDbContext context;
         public SqlEventSchedule(AppDbContext context)

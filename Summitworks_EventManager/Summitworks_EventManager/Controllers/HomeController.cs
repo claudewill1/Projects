@@ -36,7 +36,7 @@ namespace Summitworks_EventManager.Controllers
                 PageTitle = "Event Details"
             };
 
-            return View();
+            return View(homeDetailsViewModel);
         }
         [HttpGet]
         public ViewResult Create()

@@ -27,6 +27,8 @@ namespace Summitworks_EventManager
         {
             services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("EventDbConnection")));
             services.AddMvc();
+
+            services.AddTransient<IEventSchedule, SqlEventSchedule>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +38,7 @@ namespace Summitworks_EventManager
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
             app.UseRouting();
 
 
