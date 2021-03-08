@@ -11,30 +11,42 @@ namespace Summitworks_EventManager.Models
         [Key]
         public int ID { get; set; }
         [Required]
-        [MaxLength(30)]
+        
         public string EventName { get; set; }
         [Required]
         public Category? EventCategory { get; set; }
         [Required]
-        [MaxLength(30)]
+        
         public string Organizer { get; set; }
         [Required]
-        [MaxLength(50)]
+        
         public string Address { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        
         public string City { get; set; }
         [Required]
-        [MaxLength(20)]
+        
         public string State { get; set; }
         [Required]
         public int ZipCode { get; set; }
-        [MaxLength(60)]
+        [Required]
         public string EventDescription { get; set; }
         [Required]
         public DateTime EventDateTime { get; set; }
+        //[Required]
+        //public DateTime EventTime { get; set; }
         [Required]
         public string Status { get; set; }
+
+        //internal Event GetEvent(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal Event GetEvent(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

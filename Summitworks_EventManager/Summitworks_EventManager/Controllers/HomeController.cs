@@ -10,7 +10,7 @@ namespace Summitworks_EventManager.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IEventSchedule _eventSchedule;
+        private IEventSchedule _eventSchedule;
 
         public HomeController(IEventSchedule eventSchedule)
         {
@@ -25,7 +25,7 @@ namespace Summitworks_EventManager.Controllers
         {
             Event anEvent = _eventSchedule.GetEvent(id);
 
-            if(anEvent == null)
+            if (anEvent == null)
             {
                 Response.StatusCode = 404;
                 return View("EventNotFound", id);
@@ -51,10 +51,9 @@ namespace Summitworks_EventManager.Controllers
                 Event newEvent = _eventSchedule.Add(anEvent);
                 return RedirectToAction("details", new { id = newEvent.ID });
             }
-            else
-            {
-                return View();
-            }
+            
+            return View();
+            
         }
     }
 }

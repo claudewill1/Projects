@@ -10,7 +10,7 @@
             </div>
 
             <div class="card-body text-center">
-                <img asp-append-version="true" class="card-img-top" src="~/images/events.png" />
+                <img class="card-img-top" src="~/images/events.png" />
 
                 <h4>Event ID : @Model.Event.ID</h4>
                 <h4>Category : @Model.Event.EventCategory</h4>
@@ -23,6 +23,7 @@
                 <h4>Description : </h4>
                 <h4>@Model.Event.EventDescription</h4>
                 <h4>Date & Time : @Model.Event.EventDateTime</h4>
+                
                 <h4>Status : @Model.Event.Status</h4>
             </div>
             <div class="card-footer text-center">

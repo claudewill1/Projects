@@ -7,13 +7,14 @@ namespace Summitworks_EventManager.Models
 {
     public class MockEventSchedule : IEventSchedule
     {
-        private readonly List<Event> _eventList;
-        DateTime dt1 = new DateTime(2020,4,12,5,10,00);
-        DateTime dt2 = new DateTime(2020, 4, 15, 5, 00, 00);
-        DateTime dt3 = new DateTime(2020, 4, 12, 2, 000, 00);
+        private List<Event> _eventList;
+        
 
         public MockEventSchedule()
         {
+            DateTime dt1 = new DateTime(2020, 4, 12);
+            DateTime dt2 = new DateTime(2020, 4, 15);
+            DateTime dt3 = new DateTime(2020, 4, 12);
             _eventList = new List<Event>()
             {
                 new Event() {ID=1,EventName="ANA Summer Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="A summer get away to learn about numismatics",
@@ -21,7 +22,7 @@ namespace Summitworks_EventManager.Models
                 new Event() {ID=2,EventName="ANA Coin Grading Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="Camp to become certified in coin grading",
                 EventDateTime=dt2,Status="active"},
                 new Event() {ID=3,EventName="ANA Summer Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="A summer get away to learn about numismatics",
-                EventDateTime=dt1,Status="inactive"},
+                EventDateTime=dt3,Status="inactive"},
 
             };
         }
@@ -44,17 +45,33 @@ namespace Summitworks_EventManager.Models
 
         public Event Edit(Event eventChanges)
         {
-            throw new NotImplementedException();
+            Event anEvent = _eventList.FirstOrDefault(e => e.ID == eventChanges.ID);
+            if (anEvent != null)
+            {
+                anEvent.EventName = eventChanges.EventName;
+                anEvent.EventCategory = eventChanges.EventCategory;
+                anEvent.Organizer = eventChanges.Organizer;
+                anEvent.Address = eventChanges.Address;
+                anEvent.City = eventChanges.City;
+                anEvent.State = eventChanges.State;
+                anEvent.ZipCode = eventChanges.ZipCode;
+                anEvent.EventDescription = eventChanges.EventDescription;
+                anEvent.EventDateTime = eventChanges.EventDateTime;
+                
+                anEvent.Status = eventChanges.Status;
+
+            }
+            return anEvent;
         }
 
         public IEnumerable<Event> GetAllEvents()
         {
-            throw new NotImplementedException();
+            return _eventList;
         }
 
         public Event GetEvent(int id)
         {
-            throw new NotImplementedException();
+            return _eventList.FirstOrDefault(e => e.ID == id);
         }
     }
 }
