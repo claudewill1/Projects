@@ -15,9 +15,40 @@ namespace Summitworks_EventManager.Controllers
         {
             _eventSchedule = eventSchedule;
         }
-        public IActionResult Index()
+        public ViewResult Index()
+        {
+            var model = _eventSchedule.GetAllEvents();
+            return View(model);
+        }
+        public ViewResult Details(int id)
+        {
+            Event anEvent = _eventSchedule.GetEvent(id);
+
+            if(anEvent == null)
+            {
+                Response.StatusCode = 404;
+                return View("EventNotFound", id);
+            }
+
+            return View();
+        }
+        [HttpGet]
+        public ViewResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Event anEvent)
+        {
+            if (ModelState.IsValid)
+            {
+                Event newEvent = _eventSchedule.Add(anEvent);
+                return RedirectToAction("details", new { id = newEvent.ID });
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
