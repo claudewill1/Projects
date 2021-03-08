@@ -20,10 +20,8 @@ namespace Summitworks_EventManager.Models
         public string Organizer { get; set; }
         [Required]
         [MaxLength(50)]
-        public string AddressLine1 { get; set; }
-        
-        [MaxLength(50)]
-        public string AddressLine2 { get; set; }
+        public string Address { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string City { get; set; }

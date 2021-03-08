@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Summitworks_EventManager.Models;
+using Summitworks_EventManager.ViewModels;
 
 namespace Summitworks_EventManager.Controllers
 {
@@ -29,6 +30,11 @@ namespace Summitworks_EventManager.Controllers
                 Response.StatusCode = 404;
                 return View("EventNotFound", id);
             }
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Event = anEvent,
+                PageTitle = "Event Details"
+            };
 
             return View();
         }
