@@ -1,0 +1,7 @@
+C:\Users\claude\source\repos\While loops\While loops\bin\Debug\While loops.exe.config
+C:\Users\claude\source\repos\While loops\While loops\bin\Debug\While loops.exe
+C:\Users\claude\source\repos\While loops\While loops\bin\Debug\While loops.pdb
+C:\Users\claude\source\repos\While loops\While loops\obj\Debug\While loops.csprojAssemblyReference.cache
+C:\Users\claude\source\repos\While loops\While loops\obj\Debug\While loops.csproj.CoreCompileInputs.cache
+C:\Users\claude\source\repos\While loops\While loops\obj\Debug\While loops.exe
+C:\Users\claude\source\repos\While loops\While loops\obj\Debug\While loops.pdb

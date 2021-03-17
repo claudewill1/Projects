@@ -1,0 +1,17 @@
+﻿@model HomeDetailsViewModel
+@{ 
+    ViewBag.Title = "Event Details";
+}
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Event.EventName</h1>
+            </div>
+            <div class="card-body text-center">
+                <img asp-append-version="true" class="card-img-top" src="~/images/events.png" />
+                <h4>Event ID: @Model.Event.ID</h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\bin\Debug\Challenge - If Statements.exe.config
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\bin\Debug\Challenge - If Statements.exe
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\bin\Debug\Challenge - If Statements.pdb
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\obj\Debug\Challenge - If Statements.csprojAssemblyReference.cache
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\obj\Debug\Challenge - If Statements.csproj.CoreCompileInputs.cache
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\obj\Debug\Challenge - If Statements.exe
+C:\Users\claude\source\repos\Challenge - If Statements\Challenge - If Statements\obj\Debug\Challenge - If Statements.pdb

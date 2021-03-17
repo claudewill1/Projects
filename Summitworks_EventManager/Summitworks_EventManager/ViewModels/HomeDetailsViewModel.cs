@@ -10,5 +10,7 @@ namespace Summitworks_EventManager.ViewModels
     {
         public Event Event { get; set; }
         public string PageTitle { get; set; }
+
+        
     }
 }

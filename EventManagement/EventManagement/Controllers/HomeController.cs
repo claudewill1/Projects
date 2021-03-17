@@ -6,32 +6,45 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EventManagement.Models;
+using System.Dynamic;
+using EventManagement.ViewModels;
 
 namespace EventManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IEventSchedule _eventSchedule;
+        private readonly ILogger<HomeController> logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IEventSchedule eventSchedule,ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _eventSchedule = eventSchedule;
+           this.logger = logger;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            var model = _eventSchedule.GetAllEvents();
+            return View(model);
+
+        }
+        public ViewResult Details(int id)
+        {
+            Event anEvent = _eventSchedule.GetEvent(id);
+
+            if(anEvent == null)
+            {
+                Response.StatusCode = 404;
+                return View("EventNotFound", id);
+            }
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Event = anEvent,
+                PageTitle = "Event Details"
+            };
+            return View(homeDetailsViewModel);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+          
     }
 }

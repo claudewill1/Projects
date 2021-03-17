@@ -89,12 +89,14 @@
     </div>
     
     <div class="form-group row">
-        <label asp-for="Status" class="col-sm-2 col-form-label">Event Status</label>
+        <label asp-for="EventStatus" class="col-sm-2 col-form-label">Event Status</label>
         <div class="col-sm-10">
-            <select asp-for="Status" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Status>()">
+            <select asp-for="EventStatus" class="custom-select mr-sm-2">
                 <option value="">Please select</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
             </select>
-            <span asp-validation-for="Status" class="text-danger"></span>
+            <span asp-validation-for="EventStatus" class="text-danger"></span>
         </div>
 
     </div>

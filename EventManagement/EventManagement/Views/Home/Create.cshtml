@@ -1,0 +1,102 @@
+﻿@model Event
+
+@{ 
+    ViewData["Title"] = "Create Event";
+}
+<form asp-controller="home" asp-action="create" method="post">
+    <!--Enter Event Name-->
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <!--Select Event Category-->
+    <div class="form-group row">
+        <label asp-for="EventCategory" class="col-sm-2 col-form-label">Category</label>
+        <div class="col-sm-10">
+            <select asp-for="EventCategory" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Category>()">
+                <option value="">Please select</option>
+            </select>
+            <span asp-validation-for="EventCategory" class="text-danger"></span>
+        </div>
+
+    </div>
+    <!--Enter Event Organizer-->
+    <div class="form-group row">
+        <label asp-for="Organizer" class="col-sm-2 col-form-label">Organizer</label>
+        <div class="col-sm-10">
+            <input asp-for="Organizer" class="form-control" placeholder="Organizer Name" />
+            <span asp-validation-for="Organizer" class="text-danger"></span>
+        </div>
+
+    </div>
+    <!--Address Line 1-->
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
+        <div class="col-sm-10">
+            <input asp-for="EventName" class="form-control" placeholder="Book Name" />
+            <span asp-validation-for="EventName" class="text-danger"></span>
+        </div>
+
+    </div>
+</form>

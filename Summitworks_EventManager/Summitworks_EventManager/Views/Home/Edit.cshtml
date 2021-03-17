@@ -1,116 +1,170 @@
 ﻿@model Summitworks_EventManager.Models.Event
+
+
 @{
-    ViewData["Title"] = "Edit Event";
+    ViewBag.Title = "Edit";
 }
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <h4>Movie</h4>
+    <hr />
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.ID)
 
-<form asp-controller="home" asp-action="create" method="post">
-    <!--Enter Event Name-->
-    <div class="form-group row">
-        <label asp-for="EventName" class="col-sm-2 col-form-label">Event Name</label>
-        <div class="col-sm-10">
-            <input asp-for="EventName" class="form-control" placeholder="Html." />
-            <span asp-validation-for="EventName" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventName)
+            @Html.ValidationMessageFor(model => model.EventName)
         </div>
-
     </div>
-    <!--Select Event Category-->
-    <div class="form-group row">
-        <label asp-for="EventCategory" class="col-sm-2 col-form-label">Category</label>
-        <div class="col-sm-10">
-            <select asp-for="EventCategory" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Category>()">
-                <option value="">Please select</option>
-            </select>
-            <span asp-validation-for="EventCategory" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventCategory, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventCategory)
+            @Html.ValidationMessageFor(model => model.EventCategory)
         </div>
-
     </div>
-    <!--Enter Event Organizer-->
-    <div class="form-group row">
-        <label asp-for="Organizer" class="col-sm-2 col-form-label">Organizer</label>
-        <div class="col-sm-10">
-            <input asp-for="Organizer" class="form-control" placeholder="Organizer Name" />
-            <span asp-validation-for="Organizer" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Organizer, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Organizer)
+            @Html.ValidationMessageFor(model => model.Organizer)
         </div>
-
     </div>
-    <!--Address Line 1-->
-    <div class="form-group row">
-        <label asp-for="Address" class="col-sm-2 col-form-label">Address</label>
-        <div class="col-sm-10">
-            <input asp-for="Address" class="form-control" placeholder="Address (Physical)" />
-            <span asp-validation-for="Address" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
         </div>
-
     </div>
-    <div class="form-group row">
-        <label asp-for="City" class="col-sm-2 col-form-label">City</label>
-        <div class="col-sm-10">
-            <input asp-for="City" class="form-control" placeholder="City" />
-            <span asp-validation-for="City" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.City)
+            @Html.ValidationMessageFor(model => model.City)
         </div>
-
     </div>
-
-    <div class="form-group row">
-        <label asp-for="State" class="col-sm-2 col-form-label">State</label>
-        <div class="col-sm-10">
-            <select asp-for="State" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<States>()">
-                <option value="">Please select</option>
-            </select>
+    <div class="form-group">
+        @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.State)
+            @Html.ValidationMessageFor(model => model.State)
         </div>
-
     </div>
-    <div class="form-group row">
-        <label asp-for="ZipCode" class="col-sm-2 col-form-label">Zip Code</label>
-        <div class="col-sm-10">
-            <input asp-for="ZipCode" class="form-control" placeholder="ZipCode" />
-            <span asp-validation-for="ZipCode" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventDescription, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventDescription)
+            @Html.ValidationMessageFor(model => model.EventDescription)
         </div>
-
     </div>
-    <div class="form-group row">
-        <label asp-for="EventDescription" class="col-sm-2 col-form-label">Event Description</label>
-        <div class="col-sm-10">
-            <input asp-for="EventDescription" class="form-control" placeholder="Event Description" />
-            <span asp-validation-for="EventDescription" class="text-danger"></span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventDateTime, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventDateTime)
+            @Html.ValidationMessageFor(model => model.EventDateTime)
         </div>
-
     </div>
-    <div class="form-group row">
-        <label asp-for="EventDateTime" class="control-label"></label>
-        <div class='input-group date' id='datepicker'>
-            <input asp-for="EventDateTime" type="text" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-ddThh:mm")" />
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </span>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EventStatus, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EventStatus)
+            @Html.ValidationMessageFor(model => model.EventStatus)
         </div>
-        <span asp-validation-for="EventDateTime" class="text-danger"></span>
-
     </div>
-    <div class="form-group row">
-        <label asp-for="Status" class="col-sm-2 col-form-label">Event Status</label>
-        <div class="col-sm-10">
-            <select asp-for="Status" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Status>()">
-                <option value="">Please select</option>
-            </select>
-            <span asp-validation-for="Status" class="text-danger"></span>
+    @*Genre and Price removed for brevity.*@
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
         </div>
-
     </div>
-    @section Scripts
-    {
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
-        <script>
-            $(function () {
-                $('#datepicker').datetimepicker();
-            });
-        </script>
+</div>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@*@{
+        ViewData["Title"] = "Edit";
     }
 
-</form>
+    <h1>Edit</h1>
+
+    <h4>Event</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ID" />
+                <div class="form-group">
+                    <label asp-for="EventName" class="control-label"></label>
+                    <input asp-for="EventName" class="form-control" />
+                    <span asp-validation-for="EventName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventCategory" class="control-label"></label>
+                    <input asp-for="EventCategory" class="form-control" />
+                    <span asp-validation-for="EventCategory" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Organizer" class="control-label"></label>
+                    <input asp-for="Organizer" class="form-control" />
+                    <span asp-validation-for="Organizer" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <input asp-for="State" class="form-control" />
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZipCode" class="control-label"></label>
+                    <input asp-for="ZipCode" class="form-control" />
+                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventDescription" class="control-label"></label>
+                    <input asp-for="EventDescription" class="form-control" />
+                    <span asp-validation-for="EventDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventDateTime" class="control-label"></label>
+                    <input asp-for="EventDateTime" class="form-control" />
+                    <span asp-validation-for="EventDateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventStatus" class="control-label"></label>
+                    <input asp-for="EventStatus" class="form-control" />
+                    <span asp-validation-for="EventStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-controller="home" asp-action="details" type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}

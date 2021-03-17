@@ -1,0 +1,7 @@
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.csprojAssemblyReference.cache
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.AssemblyInfoInputs.cache
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.AssemblyInfo.cs
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.csproj.CoreCompileInputs.cache
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.RazorAssemblyInfo.cache
+C:\Users\claude\source\repos\Resume Templater\Resume Templater\obj\Debug\netcoreapp3.1\Resume Templater.RazorAssemblyInfo.cs

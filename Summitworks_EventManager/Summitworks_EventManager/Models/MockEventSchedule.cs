@@ -18,11 +18,11 @@ namespace Summitworks_EventManager.Models
             _eventList = new List<Event>()
             {
                 new Event() {ID=1,EventName="ANA Summer Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="A summer get away to learn about numismatics",
-                EventDateTime=dt1,Status="active"},
+                EventDateTime=dt1,EventStatus="active"},
                 new Event() {ID=2,EventName="ANA Coin Grading Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="Camp to become certified in coin grading",
-                EventDateTime=dt2,Status="active"},
+                EventDateTime=dt2,EventStatus="active"},
                 new Event() {ID=3,EventName="ANA Summer Camp",EventCategory=Category.Conference,Organizer="American Numismatic Association",Address="123 Mountain Drive",City="Denver",State="CO",ZipCode=70634,EventDescription="A summer get away to learn about numismatics",
-                EventDateTime=dt3,Status="inactive"},
+                EventDateTime=dt3,EventStatus="inactive"},
 
             };
         }
@@ -58,7 +58,7 @@ namespace Summitworks_EventManager.Models
                 anEvent.EventDescription = eventChanges.EventDescription;
                 anEvent.EventDateTime = eventChanges.EventDateTime;
                 
-                anEvent.Status = eventChanges.Status;
+                anEvent.EventStatus = eventChanges.EventStatus;
 
             }
             return anEvent;

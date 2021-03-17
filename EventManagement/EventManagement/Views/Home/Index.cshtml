@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Event>
+@{
+    ViewBag.Title = "Event List";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card-deck">
+    @foreach (var anEvent in Model)
+    {
+        <div class="card m-3">
+            <h3>@anEvent.EventName</h3>
+        </div>
+        <img asp-append-version="true" asp-actions="card-img-top" src="~/images/events.png" />
+        <div class="card-footer text-center">
+            <a asp-controller="home" asp-action="details" asp-route-id="@anEvent.ID" class="btn btn-primary">View</a>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+        </div>
+    }
 </div>

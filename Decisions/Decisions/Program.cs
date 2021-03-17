@@ -7,7 +7,9 @@ namespace Decisions
         static void Main(string[] args)
         {
             Console.Write("What is the tempature outside: ");
-            int temp = Convert.ToInt32(Console.ReadLine());
+            string temperature = Console.ReadLine();
+            int temp;
+            bool succss = Int32.TryParse(temperature, out temp);
 
             if(temp > 80)
             {

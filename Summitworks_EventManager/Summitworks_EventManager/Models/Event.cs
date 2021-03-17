@@ -37,7 +37,8 @@ namespace Summitworks_EventManager.Models
         //[Required]
         //public DateTime EventTime { get; set; }
         [Required]
-        public string Status { get; set; }
+        public string EventStatus { get; set; }
+        
 
         //internal Event GetEvent(int id)
         //{

@@ -3,57 +3,66 @@
 @{
     ViewBag.Title = "Event List";
 }
-<!-- Section: Sidebar -->
-<!--<section>-->
-
-    <!-- Section: Filters -->
-    <!--<section>-->
-
-        
-        <!-- Section: Price -->
-        <!--<section class="mb-4">
-
-            <h6 class="font-weight-bold mb-3">Price</h6>
-
-            <div class="form-check pl-0 mb-3">
-                <input type="radio" class="form-check-input" id="under25" name="materialExampleRadios">
-                <label class="form-check-label small text-uppercase card-link-secondary" for="under25">Under $25</label>
-            </div>
-            <div class="form-check pl-0 mb-3">
-                <input type="radio" class="form-check-input" id="2550" name="materialExampleRadios">
-                <label class="form-check-label small text-uppercase card-link-secondary" for="2550">$25 to $50</label>
-            </div>
-                    
-        </section>
-                
-    </section>-->
-    <!-- Section: Filters -->
-
-<!--</section>-->
-<!-- Section: Sidebar -->
 <div class="card-deck">
-    @foreach (var anEvent in Model)
+    @foreach (var item in Model)
     {
-        <div class="card m-3" style="width: 18rem">
+        <div class="card m-3">
             <div class="card-header">
-                <h3>@anEvent.EventName</h3>
+                <h3>@item.EventName</h3>
             </div>
-
-
-            <img class="card-img-top rounded" style="border: solid thin" src="~/images/events.png" />
-            <div class="card-body text-center">
-                <h4>Category : @anEvent.EventCategory</h4>
-                <h4>Location : @anEvent.City</h4>
-
+            <div class="card-body">
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
             </div>
+            <img asp-append-version="true" class="card-img-top" src="~/images/events.png" />
             <div class="card-footer text-center">
-
-                <a asp-controller="home" asp-action="details" asp-route-id="@anEvent.ID" class="btn btn-primary m-1">View</a>
-
-
-                <a href="#" class="btn btn-primary m-1">Edit</a>
-                <a href="#" class="btn btn-danger m-1">Delete</a>
+                <a asp-controller="home" asp-action="details" asp-route-id="@item.ID" class="btn btn-primary">View</a>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>
             </div>
         </div>
     }
+</div>
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventCategory)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventCategory)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
 </div>

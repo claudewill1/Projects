@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EventManagement.Models
 {
+
     public class Event
     {
         [Key]
@@ -20,20 +21,20 @@ namespace EventManagement.Models
         [MaxLength(30)]
         public string Organizer { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string AddressLine1 { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string AddressLine2 { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string City { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(20)]
         public string State { get; set; }
         [Required]
         public int ZipCode { get; set; }
-        
+
         [Required]
         public DateTime EventDateTime { get; set; }
         [Required]

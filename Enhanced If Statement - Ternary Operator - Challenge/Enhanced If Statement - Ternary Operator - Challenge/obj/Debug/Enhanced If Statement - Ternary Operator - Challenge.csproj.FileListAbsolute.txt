@@ -1,0 +1,7 @@
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\bin\Debug\Enhanced If Statement - Ternary Operator - Challenge.exe.config
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\bin\Debug\Enhanced If Statement - Ternary Operator - Challenge.exe
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\bin\Debug\Enhanced If Statement - Ternary Operator - Challenge.pdb
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\obj\Debug\Enhanced If Statement - Ternary Operator - Challenge.csprojAssemblyReference.cache
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\obj\Debug\Enhanced If Statement - Ternary Operator - Challenge.csproj.CoreCompileInputs.cache
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\obj\Debug\Enhanced If Statement - Ternary Operator - Challenge.exe
+C:\Users\claude\source\repos\Enhanced If Statement - Ternary Operator - Challenge\Enhanced If Statement - Ternary Operator - Challenge\obj\Debug\Enhanced If Statement - Ternary Operator - Challenge.pdb
